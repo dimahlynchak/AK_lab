@@ -1,15 +1,29 @@
-# Ігнорування скомпільованих файлів і тимчасових даних
+# Ігнорування всього каталогу linux-stable, крім kernel-modules-lab4
+linux-stable/*
+!linux-stable/kernel-modules-lab4/
+!linux-stable/kernel-modules-lab4/*
+
+# Ігнорування скомпільованих і тимчасових файлів
 *.o
 *.ko
 *.mod.c
+*.cmd
 *.symvers
 *.order
-*.cmd
+*.tmp
+*~
 
-# Ігнорування всієї папки linux-stable, окрім kernel-modules-lab4
-linux-stable/*
-!linux-stable/kernel-modules-lab4/
+# Ігнорування тимчасових файлів BusyBox і U-Boot
+busybox/*
+!busybox/_install/
+!busybox/rootfs.cpio.gz
+
+u-boot/*
+!u-boot/MLO
+!u-boot/u-boot.img
 
 # Інші тимчасові файли
-*~
+.DS_Store
+*.swp
+*.log
 
