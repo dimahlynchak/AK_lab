@@ -1,0 +1,15 @@
+# Ігнорування скомпільованих файлів і тимчасових даних
+*.o
+*.ko
+*.mod.c
+*.symvers
+*.order
+*.cmd
+
+# Ігнорування всієї папки linux-stable, окрім kernel-modules-lab4
+linux-stable/*
+!linux-stable/kernel-modules-lab4/
+
+# Інші тимчасові файли
+*~
+
